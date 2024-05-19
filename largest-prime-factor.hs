@@ -1,8 +1,8 @@
-sqrtInt :: Integer -> Float
-sqrtInt a = sqrt $ fromIntegral a
+sqrtInt :: Integer -> Integer
+sqrtInt a = ceiling $ sqrt $ fromIntegral a
 
 possibleFactors :: Integer -> [Integer]
-possibleFactors a = filter (\x -> x /= a && x /= 1) [1..ceiling $ sqrtInt a]
+possibleFactors a = filter (\x -> x /= a && x /= 1) [1..sqrtInt a]
 
 isDivisible :: Integer -> Integer -> Bool
 isDivisible a b = mod a b == 0
