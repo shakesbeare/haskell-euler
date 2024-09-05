@@ -16,7 +16,7 @@ getFirstTwo x = case x of
 evenFibs :: Integer -> [Integer]
 evenFibs a = [x | x <- fibsUntil a, even x]
 
-main :: IO()
+main :: IO ()
 main = do
     print $ sum $ filter (< 4_000_000) (evenFibs 1000)
 
